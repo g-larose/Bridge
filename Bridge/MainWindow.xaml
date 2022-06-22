@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:uc="clr-namespace:Bridge.UserControls"
         xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:Bridge"
         mc:Ignorable="d"
@@ -171,38 +172,65 @@
                             Margin="0 20"
                                />
                 <!--Menu Buttons-->
-                <Grid Grid.Row="2">
-                    <Grid.RowDefinitions>
-                        <RowDefinition/>
-                         <RowDefinition/>
-                         <RowDefinition/>
-                         <RowDefinition/>
-                    </Grid.RowDefinitions>
 
-                    <Button Grid.Row="0"
-                            Style="{StaticResource ButtonStyle}" 
-                            Background="#2c2c2c"
-                            Foreground="Silver"
-                            Height="60"
-                            Margin="10 0 0 0"
-                            BorderBrush="{x:Null}" />
-                    <Button Grid.Row="1"
-                            Style="{StaticResource MenuButtonStyleWithHover}"
-                            Content="Open Folder"
-                            Height="60"
-                            Margin="10 0 0 0" />
-                    <Button Grid.Row="2"
-                            Style="{StaticResource MenuButtonStyleWithHover}"
-                            Content="Open Folder"
-                            Height="60"
-                            Margin="10 0 0 0" />
-                     <Button Grid.Row="3"
-                            Style="{StaticResource MenuButtonStyleWithHover}"
-                            Content="Open Folder"
-                            Height="60" 
-                            Margin="10 0 0 0" />
+               
+                    <Border CornerRadius="14"
+                            Grid.Row="2"
+                            Background="#1c1c1c"
+                            Margin="20 0 0 0">
+                         <StackPanel Grid.Row="2"
+                            Orientation="Vertical">
+                             <uc:MenuButtons Grid.Row="0"
+                                        Icon="{StaticResource home}"
+                                        IconWidth="30"
+                                       
+                                        Height="60"
+                                        IndicatorBrush="#BEBEBE"
+                                        Text="Home"
+                                        IndicatorCornerRadius="6"
+                                        VerticalAlignment="Center"
+                                        GroupName="MenuButtons"
+                                        Margin="20 0"/>
+                            <uc:MenuButtons Grid.Row="1"
+                                            Icon="{StaticResource folder}"
+                                            IconWidth="10"
+                                            Background="#1c1c1c"
+                                            Height="60"
+                                            IndicatorBrush="#BEBEBE"
+                                            Text="Folder"
+                                    
+                                            VerticalAlignment="Center"
+                                            GroupName="MenuButtons"
+                                            Margin="20 0"/>
+                            <uc:MenuButtons Grid.Row="2"
+                                            Icon="{StaticResource settings}"
+                                            IconWidth="10"
+                                            Background="#1c1c1c"
+                                            Height="60"
+                                            IndicatorBrush="#BEBEBE"
+                                            Text="Settings"
+                                    
+                                            VerticalAlignment="Center"
+                                            GroupName="MenuButtons"
+                                            Margin="20 0"/>
+                            <uc:MenuButtons Grid.Row="3"
+                                            Icon="{StaticResource file}"
+                                            IconWidth="10"
+                                            Background="#1c1c1c"
+                                            Height="60"
+                                            IndicatorBrush="#BEBEBE"
+                                            Text="File"
+                                   
+                                            VerticalAlignment="Center"
+                                            GroupName="MenuButtons"
+                                            Margin="20 0"/>
+                    </StackPanel>
+                    </Border>
+                   
+               
+                    
 
-                </Grid>
+              
             </Grid>
         </Grid>
 
