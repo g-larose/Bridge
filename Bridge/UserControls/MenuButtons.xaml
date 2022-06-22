@@ -4,7 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Bridge.UserControls"
-             mc:Ignorable="d" >
+             mc:Ignorable="d" 
+             x:Name="this">
     <UserControl.Resources>
         <PathGeometry x:Key="DefaultIcon" Figures="M4,2L4,22 12.683594,22C12.387594,21.378,12.181078,20.707,12.0800078,20L12.074219,20C12.026219,19.673 12,19.34 12,
                       19 12,15.474 14.609,12.566078 18,12.080078 18.327,12.033078 18.66,12 19,12 19.34,12 19.673,12.033078 20,12.080078L20,8 14,2 4,2z
@@ -33,7 +34,7 @@
         <Style x:Key="IndicatorStyle" TargetType="{x:Type Border}">
             <Setter Property="HorizontalAlignment" Value="Left" />
             <Setter Property="VerticalAlignment" Value="Stretch" />
-            <Setter Property="Background" Value="#BEBEBE" />
+            <Setter Property="Background" Value="{Binding IndicatorBrush, ElementName=this}" />
             <Setter Property="Visibility" Value="Hidden" />
             <Setter Property="Width" Value="{Binding IndicatorWidth, ElementName=this, FallbackValue=4, TargetNullValue=4}"/>
             <Setter Property="CornerRadius" Value="{Binding IndicatorCornerRadius, ElementName=this, FallbackValue=2, TargetNullValue=2}"/>
